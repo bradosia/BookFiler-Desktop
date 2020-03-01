@@ -96,3 +96,13 @@ Common QuickBooks files
 |QBO|QuickBooks Bank Statement file|When you download transactions from your bank, QuickBooks opens them from a file with a .qbo extension.You can import a QBO file to quickly get transactions into your bank register.|
 
 Source: https://quickbooks.intuit.com/learn-support/en-us/import-or-export-data-files/file-types-and-extensions-used-by-quickbooks-desktop/00/203775
+
+## QODBC
+https://qodbc.com/
+
+## QBSDK
+### LANGUAGE: QBXML
+https://developer.intuit.com/app/developer/qbdesktop/docs/develop/sample-applications-and-code#invoicequery-desktop
+### LANGUAGE: QBFC
+https://developer.intuit.com/app/developer/qbdesktop/docs/develop/sample-applications-and-code#menusubscribe-desktop
+
