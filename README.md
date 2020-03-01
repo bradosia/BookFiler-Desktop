@@ -1,7 +1,21 @@
-# BookFiler Desktop
+# Bookfiler™ Desktop
 A desktop tool by Bookfiler™ for managing local machine files. Bookfiler is designed for personal and business organization.
 
 In our busy work schedule, files are often downloaded and left on the desktop or download folder indefintely. Over time files are often lost. Bookfiler™ Desktop offers machine learning and artificial intelligence solutions for organizing your files locally on your computer. Bookfiler™ Desktop does not require an internet connection, guarenteeing that it won't leak your personal financial information to the internet.
+
+Features:
+* Two version control options for managed for real and virtual entities
+* Intelligent document identification
+* Intelligent document sorting and filing
+* Intelligent Financial data preparation
+* Financial data export for QuickBooks®
+* Asset Management
+* Case Management
+
+Technical:
+* File Naming System
+* Hierarchy Context
+* QuickBooks® Integration
 
 # File Naming System
 | Tiers | Example |
@@ -12,11 +26,78 @@ In our busy work schedule, files are often downloaded and left on the desktop or
 | Lateral Sub Category | `MyBusiness_images_marketing` containing `MyBusiness_images_brochure` |
 | Sub Category | `MyBusiness_images_brochure` |
 
+example:
+
+    workspace
+    ├── MyBusiness
+    │   ├── .git                      # Respository control
+    │   ├── .bookfiler
+    │   │   ├── hierarchy.dat
+    │   │   └── ...
+    │   ├── AP                        # Accounts Payable Category
+    │   ├── AR                        # Accounts Receivable Category
+    │   └── ...
+    ├── MyBusiness_media              # Media - Lateral Category
+    │   ├── .git                      # Respository control
+    │   ├── images                    # Category
+    │   │   ├── album_D20200205       # Sub Category
+    │   │   ├── album_D20200216
+    │   │   ├── exterior
+    │   │   └── ...
+    │   ├── images_marketing          # marketing - Lateral Sub Category
+    │   │   ├── brochure              # Sub Category
+    │   │   ├── mailers
+    │   │   └── ...
+    │   ├── video
+    │   └── ...
+    └── ...
+
 ## What are lateral tiers?
-Often a large project wants to stay under one top folder to be contained for easy file sync with remote servers; however, media components will often take up the most hard drive space and will take too long to be synced with remote servers. Lateral tiers are part of the primary entity, but are placed outide in a lateral directory so the files are not synced.
+Often a large project wants to stay under one top folder to be contained for easy file sync with remote servers; however, media components will often take up the most hard drive space and will take too long to be synced with remote servers. Lateral tiers are part of the primary entity, but are placed outide in a lateral directory so the files sectioned and synced with a remote repository separately.
+
+Example situation: A user may want to separate company images and video from financial data in order to allow the accountants to have a smaller working copy of only the data they need.
+
+WITHOUT a Lateral Category:
+
+    workspace
+    ├── MyBusiness
+    │   ├── .git                      # One respository control
+    │   ├── .bookfiler
+    │   │   ├── hierarchy.dat
+    │   │   └── ...
+    │   ├── AP                        # Accounts Payable Category
+    │   ├── AR                        # Accounts Receivable Category
+    │   ├── images
+    │   ├── video
+    │   └── ...
+    └── ...
+   
+With a Lateral Category:
+
+    workspace
+    ├── MyBusiness
+    │   ├── .git                      # Separate respository control
+    │   ├── .bookfiler
+    │   │   ├── hierarchy.dat
+    │   │   └── ...
+    │   ├── AP                        # Accounts Payable Category
+    │   ├── AR                        # Accounts Receivable Category
+    │   └── ...
+    ├── MyBusiness_media              # Media - Lateral Category
+    │   ├── .git                      # Separate respository control
+    │   ├── images
+    │   ├── video
+    │   └── ...
+    └── ...
 
 # Version Control System
+An explanation here: https://en.wikipedia.org/wiki/Version_control
+
+## Git
 Git is used for version control. Since Git has a strong copyleft license, it must be installed separately.
+
+## Date Versioning
+Bookfiler™
 
 ## See history for file
 ```shell
@@ -85,7 +166,7 @@ Organize by case example: An invoice is placed in a folder for a client project.
 
 In the plain filesystem only one may be chosen unless the file is duplicated. Duplications make version control more difficult. Bookfiler™ organizes by type in the filesystem, then creates virtual links to cases.
 
-# Quickbook compatability
+# QuickBooks® Integration
 
 Bookfiler™ uses machine learning and AI techniques to gather business lists, accounts, and transactions with minimal manual review of documents to extract this data. This data may be exported into QuickBooks.
 
