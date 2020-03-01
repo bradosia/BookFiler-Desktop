@@ -23,6 +23,9 @@ Git is used for version control. Since Git has a strong copyleft license, it mus
 git log -p <file name>
 ```
 
+## cloning into an exsting directory
+https://stackoverflow.com/questions/5377960/whats-the-best-practice-to-git-clone-into-an-existing-folder
+
 # Document Identification Utility
 Uses an intelligent reader to identify a file and tag the file name. For example:
 
@@ -80,4 +83,4 @@ Organize by type example: An invoice being placed in a folder with other invoice
 
 Organize by case example: An invoice is placed in a folder for a client project. This may be easier for gathering related invoices for reimbursement or collections. 
 
-In the plain filesystem only one may be chosen. Bookfiler™ organizes by type in the filesystem, then creates virtual links to cases.
+In the plain filesystem only one may be chosen unless the file is duplicated. Duplications make version control more difficult. Bookfiler™ organizes by type in the filesystem, then creates virtual links to cases.
