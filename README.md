@@ -229,7 +229,7 @@ Organize by case example: An invoice is placed in a folder for a client project.
 In the plain filesystem only one may be chosen unless the file is duplicated. Duplications make version control more difficult. Bookfiler™ organizes by type in the filesystem, then creates virtual links to cases.
 
 # Real and Virtual Entities
-In some cases, a legal case or company project becomes so large that it requires separation from the primary entity folder in order to be managed separately. A virtual entity should be created for this case or project.
+In some cases, a legal case or company project becomes so large that it requires separation from the primary entity folder in order to be managed separately. A virtual entity should be created for this case or project. A virtual entity will contain many files linked back to the primary entity so they do not need to be copied.
 
 Example: a court case becomes too large to be managed with the company documents
 
@@ -264,7 +264,7 @@ With a Virtual Entity:
     │   │   └── ...
     │   ├── legal
     │   └── ...
-    ├── BigCompany-v-MyBusiness       # A virtual entity
+    ├── MyBusiness_BigCompany-v-MyBusiness       # A virtual entity
     │   ├── .git
     │   ├── depositions
     │   ├── evidence
