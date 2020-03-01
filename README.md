@@ -15,6 +15,7 @@ Features:
 Technical:
 * File Naming System
 * Hierarchy Context
+* Real and Virtual Entities
 * QuickBooks® Integration
 
 # File Naming System
@@ -117,11 +118,11 @@ Example: Multiple revisions to a written report
     │   └── ...
     ├── reports
     │   ├── meeting
-    │   │   ├── minutes_D20200106_V1
-    │   │   ├── minutes_D20200106_V2
-    │   │   ├── minutes_D20200113
-    │   │   ├── minutes_D20200113_V-revision
-    │   │   ├── minutes_D20200120
+    │   │   ├── minutes_D20200106_V1.doc
+    │   │   ├── minutes_D20200106_V2.doc
+    │   │   ├── minutes_D20200113.doc
+    │   │   ├── minutes_D20200113_V-revision.doc
+    │   │   ├── minutes_D20200120.doc
     │   │   └── ...
     │   └── ...
     └── ...
@@ -226,6 +227,51 @@ Organize by type example: An invoice being placed in a folder with other invoice
 Organize by case example: An invoice is placed in a folder for a client project. This may be easier for gathering related invoices for reimbursement or collections. 
 
 In the plain filesystem only one may be chosen unless the file is duplicated. Duplications make version control more difficult. Bookfiler™ organizes by type in the filesystem, then creates virtual links to cases.
+
+# Real and Virtual Entities
+In some cases, a legal case or company project becomes so large that it requires separation from the primary entity folder in order to be managed separately. A virtual entity should be created for this case or project.
+
+Example: a court case becomes too large to be managed with the company documents
+
+WITHOUT a Virtual Entity:
+
+    MyBusiness
+    ├── .git
+    ├── .bookfiler
+    │   ├── hierarchy.dat
+    │   └── ...
+    ├── legal
+    │   ├── case
+    │   │   ├── MyBusiness-v-Creditor_D2012_F2013
+    │   │   ├── Tenant1-v-MyBusiness_D2011_F2011
+    │   │   ├── Tenant2-v-MyBusiness_D2015_F2015
+    │   │   ├── BigCompany-v-MyBusiness_D2010        # ongoing Large lawsuit with BigCompany since 2010
+    │   │   │   ├── depositions
+    │   │   │   ├── evidence
+    │   │   │   ├── forms
+    │   │   │   └── ...
+    │   │   └── ...
+    │   └── ...
+    └── ...
+   
+With a Virtual Entity:
+
+    workspace
+    ├── MyBusiness
+    │   ├── .git
+    │   ├── .bookfiler
+    │   │   ├── hierarchy.dat
+    │   │   └── ...
+    │   ├── legal
+    │   └── ...
+    ├── BigCompany-v-MyBusiness       # A virtual entity
+    │   ├── .git
+    │   ├── depositions
+    │   ├── evidence
+    │   ├── forms
+    │   └── ...
+    └── ...
+
 
 # QuickBooks® Integration
 
