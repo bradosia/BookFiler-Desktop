@@ -45,12 +45,21 @@ File names become longer to become more human readable. The Document Filing Util
 Long file names mean that file may be separated and transmitted through email or online with context of the hierarchy. 
 
 # Hierarchy Context
-The hierarchy information combined between all active primary entities added into the desktop client. Each primary entity has hierarchy information
+The hierarchy information combined between all active primary entities added into the desktop client. Each primary entity has hierarchy information stored in the top level folder.
 
     .
-    ├── ...
-    ├── test                    # Test files (alternatively `spec` or `tests`)
-    │   ├── benchmarks          # Load and stress tests
-    │   ├── integration         # End-to-end, integration tests (alternatively `e2e`)
-    │   └── unit                # Unit tests
+    ├── .git                    # git repository for the primary entity lateral category
+    ├── .bookfiler              # Bookfiler™ meta data about the primary entity
+    │   ├── hierarchy.dat       # SQLITE database file with hierarchy data
+    │   ├── ...
+    │   └── ...
+    └── ...
+    
+The hierarchy context can be visually described as:
+
+    .
+    ├── primaryEntity1          # Bookfiler™ meta data for primary entity 1
+    │   └── hierarchy.dat       # SQLITE database file with hierarchy data
+    ├── primaryEntity2          # Bookfiler™ meta data for primary entity 2
+    │   └── hierarchy.dat       # SQLITE database file with hierarchy data
     └── ...
