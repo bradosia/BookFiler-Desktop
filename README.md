@@ -63,3 +63,21 @@ The hierarchy context can be visually described as:
     ├── primaryEntity2          # Bookfiler™ meta data for primary entity 2
     │   └── hierarchy.dat       # SQLITE database file with hierarchy data
     └── ...
+
+## Previous Version
+In previous versions the hierarchy data was known as the "Logic"
+
+| Hierarchy System | Logic System |
+| :-- | :-- |
+| Primary Entity  | A |
+| Category | B |
+| Sub Category | C |
+
+The concept was similar, but has now been renamed to a hierarchy system.
+
+## Organize documents by type or by case?
+Organize by type example: An invoice being placed in a folder with other invoices. May further by organized by date. This organization may be better for end of year taxes.
+
+Organize by case example: An invoice is placed in a folder for a client project. This may be easier for gathering related invoices for reimbursement or collections. 
+
+In the plain filesystem only one may be chosen. Bookfiler™ organizes by type in the filesystem, then creates virtual links to cases.
