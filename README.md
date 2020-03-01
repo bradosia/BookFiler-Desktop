@@ -138,11 +138,32 @@ Example: Multiple revisions to a written report
     │   └── ...
     ├── AP
     │   ├── invoice
-    │   │   ├── D2019-01-00           # Classifying the day as 00 assumes organizing by month
-    │   │   ├── D2019-02-00
-    │   │   ├── D2019-03-00
-    │   │   ├── D2019-04-00
-    │   │   ├── D2019-05-00
+    │   │   ├── D2019-01           # When organizing by month, the day is omitted
+    │   │   ├── D2019-02
+    │   │   ├── D2019-03
+    │   │   ├── D2019-04
+    │   │   ├── D2019-05
+    │   │   └── ...
+    │   └── ...
+    └── ...
+    
+Documents and folders may also be versioned by range using the finish date tag `_FYYYYMMDD` or `_FYYYY-MM-DD`
+
+Example: organizing legal cases by date range
+
+    MyBusiness
+    ├── .git
+    ├── .bookfiler
+    │   ├── hierarchy.dat
+    │   └── ...
+    ├── legal
+    │   ├── case
+    │   │   ├── Marbury-v-Madison_D1801_F1803                # Marbury filed suit in 1801 and decision made 1803
+    │   │   ├── McCulloch-v-Maryland_D1819_F1819
+    │   │   ├── Dred-Scott-v-Sandford_D1856_F1857
+    │   │   ├── Plessy-v-Ferguson_D1896_F1896
+    │   │   ├── Korematsu-v-United-States_D1944_F1944
+    │   │   ├── Brown-v-Board-of-Education_D1951_F1954
     │   │   └── ...
     │   └── ...
     └── ...
