@@ -86,7 +86,10 @@ Organize by case example: An invoice is placed in a folder for a client project.
 In the plain filesystem only one may be chosen unless the file is duplicated. Duplications make version control more difficult. Bookfiler™ organizes by type in the filesystem, then creates virtual links to cases.
 
 # Quickbook compatability
-QuickBooks for Windows
+
+Bookfiler™ uses machine learning and AI techniques to gather business lists, accounts, and transactions with minimal manual review of documents to extract this data. This data may be exported into QuickBooks.
+
+## QuickBooks for Windows
 Common QuickBooks files
 |File extension|File type|Description|
 |:--|:--|:--|
@@ -97,12 +100,16 @@ Common QuickBooks files
 
 Source: https://quickbooks.intuit.com/learn-support/en-us/import-or-export-data-files/file-types-and-extensions-used-by-quickbooks-desktop/00/203775
 
-## QODBC
-https://qodbc.com/
-
 ## QBSDK
-### LANGUAGE: QBXML
-https://developer.intuit.com/app/developer/qbdesktop/docs/develop/sample-applications-and-code#invoicequery-desktop
 ### LANGUAGE: QBFC
+https://developer.intuit.com/app/developer/qbdesktop/docs/develop/sample-applications-and-code#invoicequery-desktop
+
+requires: QBXMLRP2.dll
+
+### LANGUAGE: QBXML
 https://developer.intuit.com/app/developer/qbdesktop/docs/develop/sample-applications-and-code#menusubscribe-desktop
+
+The example looks for a .QBW file
+
+requires: QBXMLRP2.dll
 
