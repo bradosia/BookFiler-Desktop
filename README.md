@@ -92,8 +92,7 @@ Common QuickBooks files
 |:--|:--|:--|
 |QBW|QuickBooks Company file|When you create a company file, QuickBooks creates a file with a .qbw extension. This file holds your company file and account info. For example, if you create a company called MyBusiness, QuickBooks saves the company file as: MyBusiness.qbw.|
 |QBB|QuickBooks Backup file|When you back up your company file, QuickBooks creates a backup file with a .qbb extension. Here's how to back up your company file> and how to restore your company file from a backup.|
-|QBM|QuickBooks Portable file|When you e-mail or move a company file, QuickBooks creates a compressed version of your company file with a .qbm extension.
-For example, if you create a portable company file for MyBusiness, QuickBooks saves it as: MyBusiness.qbm.|
+|QBM|QuickBooks Portable file|When you e-mail or move a company file, QuickBooks creates a compressed version of your company file with a .qbm extension. For example, if you create a portable company file for MyBusiness, QuickBooks saves it as: MyBusiness.qbm.|
 |QBO|QuickBooks Bank Statement file|When you download transactions from your bank, QuickBooks opens them from a file with a .qbo extension.You can import a QBO file to quickly get transactions into your bank register.|
 
 Source: https://quickbooks.intuit.com/learn-support/en-us/import-or-export-data-files/file-types-and-extensions-used-by-quickbooks-desktop/00/203775
