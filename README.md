@@ -96,16 +96,56 @@ An explanation here: https://en.wikipedia.org/wiki/Version_control
 ## Git
 Git is used for version control. Since Git has a strong copyleft license, it must be installed separately.
 
-## Date Versioning
-Bookfiler™
-
-## See history for file
+### See history for file
 ```shell
 git log -p <file name>
 ```
-
-## cloning into an exsting directory
+### cloning into an exsting directory
 https://stackoverflow.com/questions/5377960/whats-the-best-practice-to-git-clone-into-an-existing-folder
+
+## Date Versioning
+Bookfiler™ date versioning does not require software management and can be done retroactively. Simply append the tag `_DYYYYMMDD` or `_DYYYY-MM-DD` to the end of different versions of the same file where YYYY is the year, MM is the month, and DD is the day of the version. The date may have different meanings based on the file category context.
+
+Documents with the same version date may further be versioned with the tag `V####` or `V-"""` where ### is a number and """ is text
+
+Example: Multiple revisions to a written report
+
+    MyBusiness
+    ├── .git
+    ├── .bookfiler
+    │   ├── hierarchy.dat
+    │   └── ...
+    ├── reports
+    │   ├── meeting
+    │   │   ├── minutes_D20200106_V1
+    │   │   ├── minutes_D20200106_V2
+    │   │   ├── minutes_D20200113
+    │   │   ├── minutes_D20200113_V-revision
+    │   │   ├── minutes_D20200120
+    │   │   └── ...
+    │   └── ...
+    └── ...
+    
+ Versioning of entire folders may also be done this way
+ 
+ Example: Organizing invoices by date
+ 
+ 
+    MyBusiness
+    ├── .git
+    ├── .bookfiler
+    │   ├── hierarchy.dat
+    │   └── ...
+    ├── AP
+    │   ├── invoice
+    │   │   ├── D2019-01-00           # Classifying the day as 00 assumes organizing by month
+    │   │   ├── D2019-02-00
+    │   │   ├── D2019-03-00
+    │   │   ├── D2019-04-00
+    │   │   ├── D2019-05-00
+    │   │   └── ...
+    │   └── ...
+    └── ...
 
 # Document Identification Utility
 Uses an intelligent reader to identify a file and tag the file name. For example:
