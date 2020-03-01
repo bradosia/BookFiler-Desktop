@@ -8,7 +8,7 @@ Features:
 * Intelligent document identification
 * Intelligent document sorting and filing
 * Intelligent Financial data preparation
-* Financial data export for QuickBooks®
+* Financial data export and import for QuickBooks®
 * Asset Management
 * Case Management
 
